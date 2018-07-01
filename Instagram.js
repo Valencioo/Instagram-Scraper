@@ -67,7 +67,7 @@ Instagram.prototype.__FetchUsername = function(tag, done) {
 /**
  * Parses the webpage data for all the mentions.
  * @param {string} tag
- * @param {Instagram-FetchedMentions} done 
+ * @param {Instagram-FetchedAllMentions} done 
  */
 
 Instagram.prototype.__FetchAllMentions = function(tag, done) {
