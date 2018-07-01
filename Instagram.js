@@ -4,7 +4,7 @@
  * @license The MIT License (MIT)
  */
 /**
- * @module Instagram Hashtag Explorer
+ * @module Instagram Scraper
  */
 'use strict';
 
