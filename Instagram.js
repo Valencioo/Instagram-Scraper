@@ -16,12 +16,18 @@ function Instagram(config) {
     var self = this;
 
     config = config || {};
-
-
+    
     this.__request = request.defaults({
         baseUrl: "https://www.instagram.com/explore/tags/",
     });
 }
+
+/**
+ * Parses the webpage data for any mentions.
+ * @param {string} tag
+ * @param {Instagram-FetchedMention} done 
+ */
+
 Instagram.prototype.__FetchMention = function(tag, done) {
     var self = this;
     this._request(tag, function(err, res, body) {
@@ -37,6 +43,12 @@ Instagram.prototype.__FetchMention = function(tag, done) {
     });
 }
 
+/**
+ * Parses the webpage data for the uploader's username.
+ * @param {string} tag
+ * @param {Instagram-FetchedUsername} done 
+ */
+
 Instagram.prototype.__FetchUsername = function(tag, done) {
     var self = this;
     this._request(tag, function(err, res, body) {
@@ -51,6 +63,12 @@ Instagram.prototype.__FetchUsername = function(tag, done) {
         }
     });
 }
+
+/**
+ * Parses the webpage data for all the mentions.
+ * @param {string} tag
+ * @param {Instagram-FetchedMentions} done 
+ */
 
 Instagram.prototype.__FetchAllMentions = function(tag, done) {
   var self = this;
