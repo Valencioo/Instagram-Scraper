@@ -1,6 +1,6 @@
 /**
  * @overview
- * @author Voidular <voidularr@gmail.com>
+ * @author Valencioo
  * @license The MIT License (MIT)
  */
 /**
